@@ -14,7 +14,6 @@ import {
     TouchableWithoutFeedback,
     ScrollView,
     Button,
-    
     Image
 } from 'react-native';
 import { styles } from '../../assets/style';
@@ -30,13 +29,13 @@ UNSAFE_componentWillMount(){
 
         return (
             <View>
-                <TouchableOpacity style={styles.HistoryCard} >
+                <TouchableOpacity onPress={()=>this.props.onClick(this.props.data.detail[0])} style={styles.HistoryCard} >
                     <Image style={styles.ImageCapture} source={this.props.data.link} />
                     <View>
                         {
                             this.props.data.detail.map((value, i) => {
                                 return (
-                                    <Text style={i==0?styles.Title:styles.label}> {value}</Text>
+                                    <Text key={i} style={i==0?styles.Title:styles.label}> {value}</Text>
 
                                 )
                               })
