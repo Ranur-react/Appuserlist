@@ -60,6 +60,6 @@ norek. 1110014951053
 BTPN Bank Visa
 No rek. 90190090823
 
-personal-mail (rahmatnur845@gmail.com)
-busines-mail (rahmatnur845@gmail.com)
+personal-mail (rahmatnur844@gmail.com)
+busines-mail (rahmatnur@barangmudo.com)
 https://wa.me/+6283182647716
