@@ -17,58 +17,36 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      SourceList: [
-        {
-          detail: [
-            'Rahmat Nur',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '083182647716',
-          ],
-          link: {uri: UserImage},
-        },
-        {
-          detail: [
-            'Annisa Sofyan',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '083182647716',
-          ],
-          link: {uri: UserImage},
-        },
-        {
-          detail: [
-            'Nurdianto Utomo',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '083182647716',
-          ],
-          link: {uri: UserImage},
-        },
-        {
-          detail: [
-            'Satya Sativ',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '083182647716',
-          ],
-          link: {uri: UserImage},
-        },
-      ],
     };
   }
+  UNSAFE_componentWillMount(){
+      console.log("------>");
+      console.log(this.props.route.params);
+      if(this.props.route.params.value){
+          this.setState({data: this.props.route.params.value});
+      }
+  }
   render() {
-    const EachKotak = () => {
-      return (
-        <View style={styles.SubContainer}>
-          {this.state.SourceList.map((value, i) => {
-            return (
-              <Kotak
-                onClick={e => this.props.navigation.navigate('Detail')}
-                data={value}
-                key={i}
-                nama={'gambar1'}
-              />
-            );
-          })}
-        </View>
-      );
+    const UserDetail = () => {
+        if(this.state.data){
+          return (
+            <View style={styles.SubContainer}>
+              {this.state.data.detail.map((value, i) => {
+                return (
+                  <View style={{alignItems:'center'}} key={i}>
+                    <Text style={!i==0?styles.HeaderTitleDetail:styles.HeaderTitle}>{value}</Text>
+                  </View>
+                );
+              })}
+            </View>
+          );
+        }else{
+            return(
+                <View>
+
+                </View>
+            )
+        }
     };
     return (
       <ImageBackground
@@ -90,10 +68,8 @@ export default class App extends Component {
             // header Title *Rq
           }
           <View style={styles.HCenter}>
-            <Text style={styles.HeaderTitle}>Students List</Text>
-            <Text style={styles.HeaderTitleDetail}>
-              Jayanusa College of Informatics Management{' '}
-            </Text>
+            <Text style={styles.HeaderTitle}>Details</Text>
+            <Text style={styles.HeaderTitleDetail}></Text>
           </View>
           <View style={styles.HRight}>
             <Text style={styles.HeaderTitle}>X</Text>
@@ -102,17 +78,22 @@ export default class App extends Component {
         {
           // header menu *JS
         }
-        <View style={styles.HMenu}>
-          <View style={styles.BoxMenu}>
+        <View style={styles.HAvatar}>
+          <View style={styles.BoxAvatar}>
             <Image
-              resizeMode="center"
-              style={styles.ImageSplash}
-              source={require('./../../assets/images/2STMIK-Jayanusa-Padang-removebg-preview.png')}></Image>
+              style={styles.ImageAvatar}
+              source={
+                !this.state.data
+                  ? require('./../../assets/images/2STMIK-Jayanusa-Padang-removebg-preview.png')
+                  : this.state.data.link
+              }></Image>
           </View>
         </View>
         {/* // content *Rq */}
         <ScrollView style={[styles.ScrollFlex]}>
-          <View style={styles.Container}></View>
+          <View style={styles.Container}>
+            <UserDetail />
+          </View>
         </ScrollView>
       </ImageBackground>
     );

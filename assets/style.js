@@ -2,7 +2,7 @@ import { StyleSheet, Dimensions } from "react-native";
 const { width: WIDTH } = Dimensions.get('window');
 const { height: HEIGHT } = Dimensions.get('window');
 const Box=70;
-const MediumBox = 100;
+const MediumBox = 140;
 const BigBox = 200;
 export const styles = StyleSheet.create({
   //Layout
@@ -77,6 +77,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'rgba(50,50,50,0.8)',
     margin: 10,
+    overflow: 'hidden',
   },
   //Scroll
   ScrollFlex: {
@@ -90,7 +91,7 @@ export const styles = StyleSheet.create({
   Container: {
     flex: 1,
     width: WIDTH,
-    marginTop: 50,
+    marginTop: 100,
   },
   SubContainer: {
     flex: 1,
@@ -158,12 +159,45 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.36,
     shadowRadius: 6.68,
     elevation: 11,
-    opacity:0.8,
+    opacity: 0.8,
   },
-  ImageSplash: {
+  //Avatar
+  HAvatar:  {
+    height: 0.20 * HEIGHT,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    borderRadius: 20,
+    // backgroundColor: 'rgba(50,50,50,0.05)',
+    marginVertical: -1 * (0.10 * HEIGHT),
+    zIndex: 99,
+  },
+  ImageAvatar: {
     width: '100%',
     height: '100%',
     resizeMode: 'center',
-    opacity:0.8
+    opacity: 1,
+  },
+  BoxAvatar: {
+    width: MediumBox,
+    height: MediumBox,
+    borderRadius: MediumBox / 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(250,250,250,0.6)',
+    margin: 10,
+    flexWrap: 'wrap',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.36,
+    shadowRadius: 6.68,
+    elevation: 11,
+    opacity: 1,
+    overflow: 'hidden', //Over Flow ini untuk membuat semua objek hanya berada di dalam kawasana Groub saja , bahkan meskipun group dalama keadaan di radius
   },
 });

@@ -53,7 +53,9 @@ export default class App extends Component {
             this.state.SourceList.map((value, i) => {
               return (
                 <Kotak
-                  onClick={e => this.props.navigation.navigate('Detail')}
+                  onClick={e =>
+                    this.props.navigation.navigate('Detail', {value})
+                  }
                   data={value}
                   key={i}
                   nama={'gambar1'}

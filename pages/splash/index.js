@@ -37,7 +37,7 @@ export default class App extends Component {
         <View style={styles.SplasIconBox}>
           <Image
             resizeMode="center"
-            style={styles.ImageSplash}
+            style={styles.ImageAvatar}
             source={require('./../../assets/images/2STMIK-Jayanusa-Padang-removebg-preview.png')}></Image>
         </View>
       </ImageBackground>
