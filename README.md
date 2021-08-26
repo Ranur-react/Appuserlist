@@ -21,32 +21,33 @@
 
  ```PowerSHELL
         git clone https://github.com/Ranur-react/Appuserlist.git
-    ```
+```
+
 2. Entry / Change terminal folder to this root folder of project
 
 ```PowerSHELL
         cd /Appuserlist
-    ```
+```
 
 4. After you on the root folder project, run this command bellow to install this project on your local computer
 
 ```PowerSHELL
         npm install
-    ```
+```
 
 5. Check connection Emualtor state on your project with commadn bellow
 
 ```PowerSHELL
         adb devices
-    ```
+```
 
-5. run this project with command
+6. run this project with command
 
 ```PowerSHELL
         npx react-native run-android
-    ```
+```
 
-6. wait a few second and this project be run
+7. wait a few second and this project be run
 
 ## Create by Ranur
 
