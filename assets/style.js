@@ -27,6 +27,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    height:Box,
     // backgroundColor:'rgba(50,50,50,0.5)'
   },
   HCenter: {
@@ -75,21 +76,31 @@ export const styles = StyleSheet.create({
     borderRadius: Box / 2,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(50,50,50,0.8)',
+    backgroundColor: 'rgba(250,250,250,250.5)',
     margin: 10,
     overflow: 'hidden',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.36,
+    shadowRadius: 6.68,
+    elevation: 11,
   },
   //Scroll
   ScrollFlex: {
-    height: 0.8 * HEIGHT,
+    flex: 1,
     flexDirection: 'row',
     backgroundColor: '#ffff',
     width: WIDTH,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
+    // backgroundColor: 'rgba(50,50,50,0.8)',
   },
   Container: {
     flex: 1,
+    height: '10%',
     width: WIDTH,
     marginTop: 100,
   },
@@ -162,8 +173,8 @@ export const styles = StyleSheet.create({
     opacity: 0.8,
   },
   //Avatar
-  HAvatar:  {
-    height: 0.20 * HEIGHT,
+  HAvatar: {
+    height: 0.2 * HEIGHT,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -171,7 +182,7 @@ export const styles = StyleSheet.create({
     flexWrap: 'wrap',
     borderRadius: 20,
     // backgroundColor: 'rgba(50,50,50,0.05)',
-    marginVertical: -1 * (0.10 * HEIGHT),
+    marginVertical: -1 * (0.1 * HEIGHT),
     zIndex: 99,
   },
   ImageAvatar: {

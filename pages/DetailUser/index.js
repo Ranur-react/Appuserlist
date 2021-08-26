@@ -4,15 +4,17 @@ import {
   Text,
   StyleSheet,
   ScrollView,
+  TouchableOpacity,
   StatusBar,Image,
   ScrollViewComponent,
   ImageBackground,
 } from 'react-native';
 import {styles} from './../../assets/style';
 import Kotak from './../../components/Kotak';
-import {showToastWithGravityAndOffset} from './../components/_Toasview';
+import {showToastWithGravityAndOffset} from './../../components/_Toasview';
 import {BgImage, UserImage} from './../../Tools/constants';
-
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faAngleLeft,faAlignJustify, faCoffee} from '@fortawesome/free-solid-svg-icons';
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -42,9 +44,7 @@ export default class App extends Component {
           );
         }else{
             return(
-                <View>
-
-                </View>
+                <View></View>
             )
         }
     };
@@ -61,9 +61,11 @@ export default class App extends Component {
         <View style={styles.Header}>
           {/* // Back Button *Rq */}
 
-          <View style={styles.HLeft}>
-            <Text style={styles.HeaderTitle}>B</Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.goBack()}
+            style={styles.HLeft}>
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </TouchableOpacity>
           {
             // header Title *Rq
           }
@@ -71,9 +73,11 @@ export default class App extends Component {
             <Text style={styles.HeaderTitle}>Details</Text>
             <Text style={styles.HeaderTitleDetail}></Text>
           </View>
-          <View style={styles.HRight}>
-            <Text style={styles.HeaderTitle}>X</Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => showToastWithGravityAndOffset('Ini Adalah Menu')}
+            style={styles.HLeft}>
+            <FontAwesomeIcon icon={faAlignJustify} />
+          </TouchableOpacity>
         </View>
         {
           // header menu *JS
