@@ -90,10 +90,10 @@ export const styles = StyleSheet.create({
   },
   //Scroll
   ScrollFlex: {
-    flex: 1,
     flexDirection: 'row',
     backgroundColor: '#ffff',
     width: WIDTH,
+    minHeight:HEIGHT,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     // backgroundColor: 'rgba(50,50,50,0.8)',
