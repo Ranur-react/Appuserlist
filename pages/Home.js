@@ -14,144 +14,64 @@ import Kotak from './../components/Kotak';
 import {showToastWithGravityAndOffset} from './../components/_Toasview';
 import {BgImage, UserImage, SativaImage} from './../Tools/constants';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faAlignJustify, faAngleLeft, faBook, faBrain, faCamera, faCoffee, faLaptopCode, faUmbrella} from '@fortawesome/free-solid-svg-icons';
+import {
+  faAlignJustify,
+  faAngleLeft,
+  faBook,
+  faBrain,
+  faCamera,
+  faCoffee,
+  faLaptopCode,
+  faUmbrella,
+} from '@fortawesome/free-solid-svg-icons';
+import {getData} from './../Tools/api';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      SourceList: [
-        {
-          detail: [
-            'Rahmat Nur',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '083182647716',
-          ],
-          link: require('./../assets/images/ranur.png'),
-        },
-        {
-          detail: [
-            'Satya Sativa',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '083182647716',
-          ],
-          link: require('./../assets/images/moya.jpg'),
-        },
-        {
-          detail: [
-            'Annisa Sofyan',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '083182647716',
-          ],
-          link: require('./../assets/images/annisa.png'),
-        },
-        {
-          detail: [
-            'Mulyadi',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '082288215177',
-          ],
-          link: require('./../assets/images/imul.png'),
-        },
-        {
-          detail: [
-            'Mulyadi',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '082288215177',
-          ],
-          link: require('./../assets/images/imul.png'),
-        },
-        {
-          detail: [
-            'Mulyadi',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '082288215177',
-          ],
-          link: require('./../assets/images/imul.png'),
-        },
-        {
-          detail: [
-            'Mulyadi',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '082288215177',
-          ],
-          link: require('./../assets/images/imul.png'),
-        },
-        {
-          detail: [
-            'Rahmat Nur',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '083182647716',
-          ],
-          link: require('./../assets/images/ranur.png'),
-        },
-        {
-          detail: [
-            'Satya Sativa',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '083182647716',
-          ],
-          link: require('./../assets/images/moya.jpg'),
-        },
-        {
-          detail: [
-            'Annisa Sofyan',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '083182647716',
-          ],
-          link: require('./../assets/images/annisa.png'),
-        },
-        {
-          detail: [
-            'Mulyadi',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '082288215177',
-          ],
-          link: require('./../assets/images/imul.png'),
-        },
-        {
-          detail: [
-            'Mulyadi',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '082288215177',
-          ],
-          link: require('./../assets/images/imul.png'),
-        },
-        {
-          detail: [
-            'Mulyadi',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '082288215177',
-          ],
-          link: require('./../assets/images/imul.png'),
-        },
-        {
-          detail: [
-            'Mulyadi',
-            'Jl. Korong Pauah Nagari Katapiang',
-            '082288215177',
-          ],
-          link: require('./../assets/images/imul.png'),
-        },
-      ],
+
     };
   }
+  getDatafromBackend = () => {
+    const earn=async () => {
+      var Pitcher = await getData('Mahasiswa');
+      this.setState({dataMahasiswa: Pitcher});
+      console.log('====================================');
+      console.log(Pitcher);
+      console.log('====================================');
+    };
+    earn();
+  };
+  UNSAFE_componentWillMount(){
+    this.getDatafromBackend();
+
+  }
+
   render() {
     const EachKotak = () => {
-      return (
-        <View style={styles.SubContainer}>
-          {this.state.SourceList.map((value, i) => {
-            return (
-              <Kotak
-                onClick={e => this.props.navigation.navigate('Detail', {value})}
-                data={value}
-                key={i}
-                nama={'gambar1'}
-              />
-            );
-          })}
-        </View>
-      );
+      if (!this.state.dataMahasiswa){
+        return(
+           <View style={styles.SubContainer}>
+           </View>
+        )
+      }
+        return (
+          <View style={styles.SubContainer}>
+            {this.state.dataMahasiswa.map((value, i) => {
+              return (
+                <Kotak
+                  onClick={e =>
+                    this.props.navigation.navigate('Detail', {value})
+                  }
+                  data={value}
+                  gambar={{uri: UserImage}}
+                  key={i}
+                />
+              );
+            })}
+          </View>
+        );
     };
     return (
       <ImageBackground
@@ -217,8 +137,7 @@ export default class App extends Component {
           </View>
         </View>
         {/* // content *Rq */}
-        <ScrollView
-          >
+        <ScrollView>
           <View style={[styles.ScrollFlex]}>
             <View style={styles.Container}>
               <EachKotak />
