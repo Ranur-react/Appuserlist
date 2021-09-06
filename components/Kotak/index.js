@@ -17,7 +17,21 @@ import {
   Image,
 } from 'react-native';
 import {styles} from '../../assets/style';
-
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {
+  faAngleLeft,
+  faAlignJustify,
+  Linking,
+  faCoffee,
+  faPhoneAlt,
+  faPhoneSquareAlt,
+  faPhone,
+  faBuilding,
+  faIdCardAlt,
+  faInbox,
+  faAtom,
+  faMailBulk,
+} from '@fortawesome/free-solid-svg-icons';
 class KotakOLD extends Component {
   constructor(props) {
     super(props);
@@ -58,16 +72,20 @@ class Kotak extends Component {
   render() {
     return (
       <View>
+      
         <TouchableOpacity
           onPress={() => this.props.onClick()}
           style={styles.HistoryCard}>
           <Image style={styles.ImageCapture} source={this.props.gambar} />
           <View>
             <Text style={styles.Title}>{this.props.data.nama}</Text>
-            <Text style={styles.label}>
-              {this.props.data.nobp} -
-              {this.props.data.alamat}
-            </Text>
+            <View style={styles.detailIcon}>
+              <FontAwesomeIcon color="rgba(50,50,50,0.5)" icon={faIdCardAlt} />
+
+              <Text style={styles.label}>
+                {this.props.data.nobp} 
+              </Text>
+            </View>
           </View>
         </TouchableOpacity>
       </View>

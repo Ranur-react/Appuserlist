@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   StatusBar,Image,
   ScrollViewComponent,
+  Linking,
   ImageBackground,
 } from 'react-native';
 import {styles} from './../../assets/style';
@@ -14,7 +15,7 @@ import Kotak from './../../components/Kotak';
 import {showToastWithGravityAndOffset} from './../../components/_Toasview';
 import {BgImage, UserImage} from './../../Tools/constants';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faAngleLeft,faAlignJustify, faCoffee} from '@fortawesome/free-solid-svg-icons';
+import {faAngleLeft,faAlignJustify, faCoffee, faPhoneAlt, faPhoneSquareAlt, faPhone, faBuilding, faIdCardAlt, faInbox, faAtom, faMailBulk, faMapMarked} from '@fortawesome/free-solid-svg-icons';
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -33,13 +34,50 @@ export default class App extends Component {
         if(this.state.data){
           return (
             <View style={styles.SubContainer}>
-              {this.state.data.detail.map((value, i) => {
-                return (
-                  <View style={{alignItems:'center'}} key={i}>
-                    <Text style={!i==0?styles.HeaderTitleDetail:styles.HeaderTitle}>{value}</Text>
+              <View style={{alignItems: 'center'}}>
+                <View style={{alignItems: 'center'}}>
+                  <Text style={styles.HeaderTitle}>{this.state.data.nama}</Text>
+                </View>
+                <View style={{alignItems: 'flex-start'}}>
+                  <View style={styles.detailIcon}>
+                    <FontAwesomeIcon
+                      color="rgba(50,50,50,0.5)"
+                      icon={faIdCardAlt}
+                    />
+                    <Text> Student ID. {this.state.data.nobp}</Text>
                   </View>
-                );
-              })}
+                  <View style={styles.detailIcon}>
+                    <FontAwesomeIcon color="green" icon={faPhone} />
+                    <Text
+                      onPress={() =>
+                        Linking.openURL(`tel:${this.state.data.telpon}`)
+                      }>
+                      {' '}
+                      {this.state.data.telpon}
+                    </Text>
+                  </View>
+                  <View style={styles.detailIcon}>
+                    <FontAwesomeIcon
+                      color="rgba(50,50,50,0.5)"
+                      icon={faMapMarked}
+                    />
+                    <Text> {this.state.data.alamat}</Text>
+                  </View>
+                  <View style={styles.detailIcon}>
+                    <FontAwesomeIcon
+                      color="rgba(50,50,50,0.8)"
+                      icon={faMailBulk}
+                    />
+                    <Text
+                      onPress={() =>
+                        Linking.openURL(`mailto:${this.state.data.email}`)
+                      }>
+                      {' '}
+                      {this.state.data.email}
+                    </Text>
+                  </View>
+                </View>
+              </View>
             </View>
           );
         }else{
@@ -86,10 +124,7 @@ export default class App extends Component {
           <View style={styles.BoxAvatar}>
             <Image
               style={styles.ImageAvatar}
-              source={
-                !this.state.data
-                  ? require('./../../assets/images/2STMIK-Jayanusa-Padang-removebg-preview.png')
-                  : this.state.data.link
+              source={require('./../../assets/images/2STMIK-Jayanusa-Padang-removebg-preview.png')
               }></Image>
           </View>
         </View>

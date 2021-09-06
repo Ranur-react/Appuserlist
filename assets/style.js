@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    height:Box,
+    height: Box,
     // backgroundColor:'rgba(50,50,50,0.5)'
   },
   HCenter: {
@@ -59,8 +59,7 @@ export const styles = StyleSheet.create({
   },
   //header Menu
   HMenu: {
-    height: 0.15 * HEIGHT,
-    display: 'flex',
+    width: WIDTH,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
@@ -69,6 +68,46 @@ export const styles = StyleSheet.create({
     // backgroundColor: 'rgba(50,50,50,0.05)',
     marginVertical: -1 * (0.075 * HEIGHT),
     zIndex: 99,
+  },
+  BoxMenuMedium: {
+    width: MediumBox,
+    height: MediumBox,
+    borderRadius: MediumBox * 0.2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(250,250,250,250.5)',
+    margin: 10,
+    overflow: 'hidden',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.36,
+    shadowRadius: 6.68,
+    elevation: 11,
+  },
+  BoxFlatButton: {
+    position: 'absolute',
+    top: HEIGHT - 100,
+    left: WIDTH - 100,
+    width: Box,
+    height: Box,
+    borderRadius: Box / 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(250,250,250,250.5)',
+    margin: 10,
+    overflow: 'hidden',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.36,
+    shadowRadius: 6.68,
+    elevation: 11,
+    zIndex: 999,
   },
   BoxMenu: {
     width: Box,
@@ -93,10 +132,19 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#ffff',
     width: WIDTH,
-    minHeight:HEIGHT,
+    minHeight: HEIGHT * 0.9,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     // backgroundColor: 'rgba(50,50,50,0.8)',
+  },
+  ContainerMenu: {
+    flex: 1,
+    width: WIDTH,
+    marginTop: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
   Container: {
     flex: 1,
@@ -107,6 +155,12 @@ export const styles = StyleSheet.create({
   SubContainer: {
     flex: 1,
     width: 'auto',
+    marginHorizontal: 10,
+  },
+  SubContainerForm: {
+    flex: 1,
+    width: 'auto',
+    marginTop: MediumBox/2,
     marginHorizontal: 10,
   },
 
@@ -170,7 +224,7 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.36,
     shadowRadius: 6.68,
     elevation: 11,
-    opacity: 0.8,
+    opacity: 0.4,
   },
   //Avatar
   HAvatar: {
@@ -210,5 +264,32 @@ export const styles = StyleSheet.create({
     elevation: 11,
     opacity: 1,
     overflow: 'hidden', //Over Flow ini untuk membuat semua objek hanya berada di dalam kawasana Groub saja , bahkan meskipun group dalama keadaan di radius
+  },
+  detailIcon: {
+    flexDirection: 'row',
+    marginTop: 10,
+  },
+  TextInput: {
+    borderWidth: 1,
+    borderColor: '#6DD5FA',
+    paddingHorizontal: 20,
+    borderRadius: 50,
+    backgroundColor: '#fff',
+    elevation: 5,
+    color: 'rgba(0,0,0,0.6)',
+    marginVertical: 10,
+  },
+  textInputLable: {
+    textAlign: 'left',
+    fontFamily: 'OpenSans',
+    fontSize: 11,
+    marginLeft: 20,
+    textTransform: 'capitalize',
+    fontWeight: '500',
+    color: 'rgba(0,0,0,0.8)',
+    textTransform: 'none',
+  },
+  FromGroub: {
+    marginHorizontal: 10,
   },
 });

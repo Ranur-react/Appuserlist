@@ -4,6 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Splash from './../pages/splash';
 import Home from './../pages/Home';
 import DetailUser from './../pages/DetailUser';
+import MahasiswaPage from './../pages/Mahasiswa';
+import FormMahasiswaPage from './../pages/FormMahasiswa';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +32,16 @@ class Router extends Component {
         <Stack.Screen
           name="Detail"
           component={DetailUser}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="MahasiswaPage"
+          component={MahasiswaPage}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="FormMahasiswaPage"
+          component={FormMahasiswaPage}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

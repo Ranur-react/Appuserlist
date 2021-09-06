@@ -15,7 +15,6 @@ import HeaderMenu from './../components/HeaderMenu';
 import {showToastWithGravityAndOffset} from './../components/_Toasview';
 import {BgImage, UserImage, SativaImage} from './../Tools/constants';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import LinearGradient from 'react-native-linear-gradient';
 import {
   faAlignJustify,
   faAngleLeft,
@@ -27,7 +26,7 @@ import {
   faUmbrella,
 } from '@fortawesome/free-solid-svg-icons';
 import {getData} from './../Tools/api';
-import Menu from './../components/Menu';
+import Mahasiswa from './Mahasiswa';
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -36,8 +35,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <LinearGradient
-        colors={['#FFFFFF', '#6DD5FA', '#6DD5FA']}
+      <ImageBackground
+        source={{uri: BgImage}}
+        resizeMode="cover"
         style={styles.Layout}>
         <StatusBar
           barStyle="dark-content"
@@ -80,11 +80,12 @@ export default class App extends Component {
         {
           // header menu *JS
         }
+        <View>
+          <HeaderMenu />
+        </View>
         {/* // content *Rq */}
-        <ScrollView>
-          <Menu navprops={this.props.navigation} />
-        </ScrollView>
-      </LinearGradient>
+        <ScrollView></ScrollView>
+      </ImageBackground>
     );
   }
 }

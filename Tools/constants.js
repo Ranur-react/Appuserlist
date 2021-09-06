@@ -4,8 +4,28 @@ export const UserImage='https://images.unsplash.com/photo-1535713875002-d1d0cf37
 export const SativaImage =
   'https://drive.google.com/file/d/1iUjGb9YuM6QvzrhFG9edmb6EdRxeFfCf/preview';
 
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {
+  faAlignJustify,
+  faAngleLeft,
+  faBook,
+  faBrain,
+  faCamera,
+  faCoffee,
+  faLaptopCode,
+  faUserGraduate,
+  faUserInjured,
+  faCapsules,
+} from '@fortawesome/free-solid-svg-icons';
 
-
-export const Domain = '192.168.81.75/';
+export const Domain = '192.168.72.75/';
 export const base_url = 'http://'+Domain;
 export const API_Baseurl = base_url + 'api-server/public/';
+export var menuList = {
+  menu: [
+    {lable: 'Matakuliah', icon: faBook, dest: 'MatakuliahPage'},
+    {lable: 'Mahasiswa', icon: faUserGraduate, dest: 'MahasiswaPage'},
+    {lable: 'Dosen', icon: faUserInjured, dest: 'DosenPage'},
+    // {lable: 'Jurusan', icon: faCapsules, dest: 'DosenPage'},
+  ],
+};
