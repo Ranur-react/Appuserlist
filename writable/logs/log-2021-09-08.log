@@ -1,0 +1,262 @@
+CRITICAL - 2021-09-08 04:29:28 --> syntax error, unexpected '}'
+#0 /app/myapp/api-server/system/Autoloader/Autoloader.php(273): CodeIgniter\Autoloader\Autoloader->includeFile('/app/myapp/api-...')
+#1 /app/myapp/api-server/system/Autoloader/Autoloader.php(247): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 /app/myapp/api-server/system/CodeIgniter.php(885): class_exists('\\App\\Controller...', true)
+#5 /app/myapp/api-server/system/CodeIgniter.php(421): CodeIgniter\CodeIgniter->startController()
+#6 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-09-08 11:47:05 --> syntax error, unexpected '}'
+#0 /app/myapp/api-server/system/Autoloader/Autoloader.php(273): CodeIgniter\Autoloader\Autoloader->includeFile('/app/myapp/api-...')
+#1 /app/myapp/api-server/system/Autoloader/Autoloader.php(247): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 /app/myapp/api-server/system/CodeIgniter.php(885): class_exists('\\App\\Controller...', true)
+#5 /app/myapp/api-server/system/CodeIgniter.php(421): CodeIgniter\CodeIgniter->startController()
+#6 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-09-08 11:48:36 --> syntax error, unexpected '}'
+#0 /app/myapp/api-server/system/Autoloader/Autoloader.php(273): CodeIgniter\Autoloader\Autoloader->includeFile('/app/myapp/api-...')
+#1 /app/myapp/api-server/system/Autoloader/Autoloader.php(247): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 /app/myapp/api-server/system/CodeIgniter.php(885): class_exists('\\App\\Controller...', true)
+#5 /app/myapp/api-server/system/CodeIgniter.php(421): CodeIgniter\CodeIgniter->startController()
+#6 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-09-08 11:49:41 --> syntax error, unexpected '}'
+#0 /app/myapp/api-server/system/Autoloader/Autoloader.php(273): CodeIgniter\Autoloader\Autoloader->includeFile('/app/myapp/api-...')
+#1 /app/myapp/api-server/system/Autoloader/Autoloader.php(247): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 /app/myapp/api-server/system/CodeIgniter.php(885): class_exists('\\App\\Controller...', true)
+#5 /app/myapp/api-server/system/CodeIgniter.php(421): CodeIgniter\CodeIgniter->startController()
+#6 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2021-09-08 12:58:50 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 12:58:50 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(84): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-08 13:01:13 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 13:01:13 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(84): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-08 13:02:46 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 13:02:46 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(84): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-08 13:04:14 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 13:04:14 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(84): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-08 13:24:35 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 13:24:35 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(84): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-08 13:27:47 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 13:27:47 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(84): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-09-08 13:32:47 --> There is no data to update.
+#0 /app/myapp/api-server/system/BaseModel.php(1668): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /app/myapp/api-server/system/BaseModel.php(880): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, NULL)
+#3 /app/myapp/api-server/app/Controllers/Mahasiswa.php(85): CodeIgniter\Model->update(Array)
+#4 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#5 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#6 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-09-08 13:32:54 --> There is no data to update.
+#0 /app/myapp/api-server/system/BaseModel.php(1668): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /app/myapp/api-server/system/BaseModel.php(880): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, NULL)
+#3 /app/myapp/api-server/app/Controllers/Mahasiswa.php(85): CodeIgniter\Model->update(Array)
+#4 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#5 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#6 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-09-08 13:37:15 --> Undefined property: stdClass::$nama
+#0 /app/myapp/api-server/app/Controllers/Mahasiswa.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/app/myapp/api-...', 85, Array)
+#1 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#2 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#3 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-09-08 13:39:48 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 13:39:48 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(91): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-08 13:40:30 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 13:40:30 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(91): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-08 13:52:16 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 13:52:16 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(91): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-08 13:55:16 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 13:55:16 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(91): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-08 13:55:31 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 13:55:31 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(91): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-08 13:57:47 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 13:57:47 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(92): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-08 13:59:18 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+CRITICAL - 2021-09-08 13:59:18 --> Unknown column 'tb_mahasiswa.id' in 'where clause'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('UPDATE `tb_maha...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_maha...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_maha...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2482): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_maha...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(326): CodeIgniter\Database\BaseBuilder->update()
+#5 /app/myapp/api-server/system/BaseModel.php(917): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /app/myapp/api-server/system/Model.php(718): CodeIgniter\BaseModel->update(Array, Array)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(92): CodeIgniter\Model->update('1720001', Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->update('1720001')
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}

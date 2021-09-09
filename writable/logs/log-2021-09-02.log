@@ -1,0 +1,13 @@
+ERROR - 2021-09-02 00:02:20 --> Error connecting to the database: No such file or directory
+CRITICAL - 2021-09-02 00:02:20 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+#0 /app/myapp/api-server/system/Database/BaseConnection.php(625): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/myapp/api-server/system/Database/BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 /app/myapp/api-server/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#3 /app/myapp/api-server/system/BaseModel.php(603): CodeIgniter\Model->doFindAll(0, 0)
+#4 /app/myapp/api-server/app/Controllers/Mahasiswa.php(16): CodeIgniter\BaseModel->findAll()
+#5 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->index()
+#6 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

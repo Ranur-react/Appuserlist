@@ -1,0 +1,59 @@
+CRITICAL - 2021-09-06 12:40:51 --> syntax error, unexpected '}', expecting end of file
+#0 /app/myapp/api-server/system/Router/Router.php(169): CodeIgniter\Router\Router->autoRoute('Mahasiswa')
+#1 /app/myapp/api-server/system/CodeIgniter.php(809): CodeIgniter\Router\Router->handle('Mahasiswa')
+#2 /app/myapp/api-server/system/CodeIgniter.php(389): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-09-06 12:41:50 --> syntax error, unexpected '}', expecting end of file
+#0 /app/myapp/api-server/system/Router/Router.php(169): CodeIgniter\Router\Router->autoRoute('Mahasiswa')
+#1 /app/myapp/api-server/system/CodeIgniter.php(809): CodeIgniter\Router\Router->handle('Mahasiswa')
+#2 /app/myapp/api-server/system/CodeIgniter.php(389): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-09-06 12:42:34 --> Duplicate entry '1720009' for key 'PRIMARY'
+CRITICAL - 2021-09-06 12:42:34 --> Duplicate entry '1720009' for key 'PRIMARY'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `tb...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /app/myapp/api-server/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /app/myapp/api-server/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(43): CodeIgniter\Model->insert(Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->create()
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-06 12:44:11 --> Duplicate entry '1720012' for key 'PRIMARY'
+CRITICAL - 2021-09-06 12:44:11 --> Duplicate entry '1720012' for key 'PRIMARY'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `tb...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /app/myapp/api-server/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /app/myapp/api-server/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(44): CodeIgniter\Model->insert(Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->create()
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-09-06 12:44:58 --> Duplicate entry '1720001' for key 'PRIMARY'
+CRITICAL - 2021-09-06 12:44:58 --> Duplicate entry '1720001' for key 'PRIMARY'
+#0 /app/myapp/api-server/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `tb...')
+#1 /app/myapp/api-server/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 /app/myapp/api-server/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 /app/myapp/api-server/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 /app/myapp/api-server/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /app/myapp/api-server/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /app/myapp/api-server/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /app/myapp/api-server/app/Controllers/Mahasiswa.php(43): CodeIgniter\Model->insert(Array)
+#8 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->create()
+#9 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}

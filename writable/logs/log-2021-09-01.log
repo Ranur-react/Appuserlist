@@ -1,0 +1,40 @@
+CRITICAL - 2021-09-01 22:22:13 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-09-01 22:36:24 --> Class 'APP\Models\ModelMhs' not found
+#0 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->index()
+#1 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#2 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-09-01 22:37:14 --> Class 'APP\Models\ModelMhs' not found
+#0 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->index()
+#1 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#2 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-09-01 22:51:06 --> Class 'APP\Models\Modelmhs' not found
+#0 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->index()
+#1 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#2 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-09-01 22:58:05 --> Class 'APP\Models\Modelmhs' not found
+#0 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->index()
+#1 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#2 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2021-09-01 23:02:26 --> Error connecting to the database: No such file or directory
+CRITICAL - 2021-09-01 23:02:26 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+#0 /app/myapp/api-server/system/Database/BaseConnection.php(625): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/myapp/api-server/system/Database/BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 /app/myapp/api-server/system/Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#3 /app/myapp/api-server/system/BaseModel.php(603): CodeIgniter\Model->doFindAll(0, 0)
+#4 /app/myapp/api-server/app/Controllers/Mahasiswa.php(16): CodeIgniter\BaseModel->findAll()
+#5 /app/myapp/api-server/system/CodeIgniter.php(928): App\Controllers\Mahasiswa->index()
+#6 /app/myapp/api-server/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#7 /app/myapp/api-server/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/myapp/api-server/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
