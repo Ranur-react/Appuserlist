@@ -48,9 +48,6 @@ export default class MahasiswaPage extends Component {
     const earn = async () => {
       var Pitcher = await getData('jurusan');
       this.setState({jurusan: Pitcher});
-      console.log('=================Jurusan===================');
-      console.log(Pitcher);
-      console.log('====================================');
     };
     earn();
   };
@@ -60,17 +57,19 @@ export default class MahasiswaPage extends Component {
   render() {
       const SimpanData=()=>{
               const earn = async () => {
-                var Pitcher = await insertData('mahasiswa', {
+                var data = {
                   nobp: this.state.nobp,
                   nama: this.state.nama,
-                  phone: this.state.phone,
-                  id_jurusan: this.state.id_jurusan,
                   alamat: this.state.alamat,
+                  telpon: this.state.phone,
                   email: this.state.email,
-                });
-                console.log('=================Hasil Simpan===================');
-                console.log(Pitcher);
-                console.log('====================================');
+                  jurusan_id: this.state.id_jurusan,
+                };
+                var Pitcher = await insertData('mahasiswa', data);
+                if (Pitcher.status){
+                  showToastWithGravityAndOffset(Pitcher.message.success);
+                  this.props.navigation.push('MahasiswaPage');
+                }
               };
               earn();
       }
@@ -187,6 +186,7 @@ export default class MahasiswaPage extends Component {
                     <SelectInputNative
                       lable="Pilih Jurusan"
                       lebar={'100%'}
+                      style={styles.ComboInput}
                       selectedValue={this.state.id_jurusan}
                       onSelectData={e => piliJurusan(e)}
                       data={this.state.jurusan}

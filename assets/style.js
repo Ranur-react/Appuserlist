@@ -160,7 +160,7 @@ export const styles = StyleSheet.create({
   SubContainerForm: {
     flex: 1,
     width: 'auto',
-    marginTop: MediumBox/2,
+    marginTop: MediumBox / 2,
     marginHorizontal: 10,
   },
 
@@ -269,6 +269,10 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 10,
   },
+  detailIconEdit: {
+    flexDirection: 'row',
+    marginVertical: 100,
+  },
   TextInput: {
     borderWidth: 1,
     borderColor: '#6DD5FA',
@@ -277,6 +281,23 @@ export const styles = StyleSheet.create({
     backgroundColor: '#fff',
     elevation: 5,
     color: 'rgba(0,0,0,0.6)',
+    marginVertical: 10,
+  },
+  ComboInput: {
+    borderWidth: 1,
+    borderColor: '#6DD5FA',
+    paddingHorizontal: 20,
+    borderRadius: 50,
+    backgroundColor: '#fff',
+    color: 'rgba(0,0,0,0.6)',
+  },
+  ComboEdit: {
+    borderWidth: 1,
+    borderColor: '#6DD5FA',
+    paddingHorizontal: 20,
+    borderRadius: 50,
+    backgroundColor: '#fff',
+    color: 'rgba(0,0,0,1)',
     marginVertical: 10,
   },
   textInputLable: {

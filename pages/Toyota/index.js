@@ -10,7 +10,7 @@ import {
   ImageBackground,
 } from 'react-native';
 import {styles} from './../../assets/style';
-import Kotak from './../../components/Kotak';
+import Kotak from './../../components/KotakToyota';
 import HeaderMenu from './../../components/HeaderMenu';
 import {showToastWithGravityAndOffset} from './../../components/_Toasview';
 import {BgImage, UserImage, SativaImage} from './../../Tools/constants';
@@ -27,7 +27,7 @@ import {
   faPlusCircle,
   faUmbrella,
 } from '@fortawesome/free-solid-svg-icons';
-import {getData} from './../../Tools/api';
+import {getData, getDatafromtoyota} from './../../Tools/api';
 
 export default class MahasiswaPage extends Component {
   constructor(props) {
@@ -36,36 +36,30 @@ export default class MahasiswaPage extends Component {
   }
   getDatafromBackend = () => {
     const earn = async () => {
-      var Pitcher = await getData('mahasiswa');
-      if (Pitcher.length > 0) {
-         this.setState({dataMahasiswa: Pitcher});
-      } else{
-        console.log('====================================');
-        console.log(Pitcher);
-        console.log('====================================');
-      }
+      var Pitcher = await getDatafromtoyota('null');
+      this.setState({dataget: Pitcher});
+      console.log('====================================');
+      console.log(Pitcher.data);
+      console.log('====================================');
     };
     earn();
   };
-  componentDidMount(){
-    this.getDatafromBackend();
-  }
   UNSAFE_componentWillMount() {
     this.getDatafromBackend();
   }
   render() {
     const EachKotak = () => {
-      if (!this.state.dataMahasiswa) {
+      if (!this.state.dataget) {
         return <View style={styles.SubContainer}></View>;
       }
       return (
         <View style={styles.SubContainer}>
-          {this.state.dataMahasiswa.map((value, i) => {
+          {this.state.dataget.data.map((value, i) => {
             return (
               <Kotak
-                onClick={e => this.props.navigation.navigate('Detail', {value})}
+                // onClick={e => this.props.navigation.navigate('Detail', {value})}
                 data={value}
-                gambar={{uri: UserImage}}
+                gambar={{uri: value.avatar}}
                 key={i}
               />
             );
@@ -104,7 +98,7 @@ export default class MahasiswaPage extends Component {
             <Text
               onPress={() => showToastWithGravityAndOffset("This's Title")}
               style={styles.HeaderTitle}>
-              DATA MAHASISWA
+              API HANDSHAKE DATA
             </Text>
             <Text
               onPress={() =>

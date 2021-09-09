@@ -5,7 +5,8 @@ import {
   CheckIcon,
   Center,
   NativeBaseProvider,
-} from "native-base"
+  extendTheme,
+} from 'native-base';
 import { View } from 'react-native';
 
 
@@ -25,30 +26,46 @@ export default class SelectInputNative extends Component {
     console.log('====================================');
   }
   render() {
+    const theme = extendTheme({
+      components: {
+        Select: {
+          baseStyle: this.props.style,
+          defaultProps: {},
+          variants: {},
+          sizes: {},
+        },
+      },
+    });
+
+
     const ComboData = () => {
       let [language, setLanguage] = React.useState("")
       return (
-        <VStack alignItems="center" space={4}>
-          <Select
-            selectedValue={this.props.selectedValue}
-            minWidth={{ width: this.props.lebar }}
-            accessibilityLabel={this.props.lable}
-            placeholder={this.props.lable}
-            onValueChange={(itemValue) => this.props.onSelectData(itemValue)}
-            _selectedItem={{
-              bg: "cyan.600",
-              endIcon: <CheckIcon size={5} />,
-            }}
-          >
-            {
-              this.props.data.map((value, i) => {
-                return (<Select.Item key={i} label={value.nama_jurusan} value={value.id_jurusan} />
-                )
-              })
-            }
-          </Select>
-        </VStack>
-      )
+        <NativeBaseProvider theme={theme}>
+          <VStack alignItems="center" space={4}>
+            <Select
+              selectedValue={this.props.selectedValue}
+              minWidth={{width: this.props.lebar}}
+              accessibilityLabel={this.props.lable}
+              placeholder={this.props.lable}
+              onValueChange={itemValue => this.props.onSelectData(itemValue)}
+              _selectedItem={{
+                bg: 'cyan.600',
+                endIcon: <CheckIcon size={5} />,
+              }}>
+              {this.props.data.map((value, i) => {
+                return (
+                  <Select.Item
+                    key={i}
+                    label={value.nama_jurusan}
+                    value={value.id_jurusan}
+                  />
+                );
+              })}
+            </Select>
+          </VStack>
+        </NativeBaseProvider>
+      );
     }
     if (!this.props.data) {
       return (
