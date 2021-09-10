@@ -130,9 +130,7 @@ export default class MahasiswaPage extends Component {
         }
         <View style={styles.HAvatar}>
           <View style={styles.BoxAvatar}>
-            <Image
-              style={styles.ImageAvatar}
-              source={require('./../../assets/images/ranur.png')}></Image>
+            <Image style={styles.ImageAvatar} source={{uri: UserImage}}></Image>
           </View>
         </View>
         {/* // content *Rq */}

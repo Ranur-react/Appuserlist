@@ -166,7 +166,7 @@ const exexDeleteData = v => {
             <View style={styles.BoxAvatar}>
               <Image
                 style={styles.ImageAvatar}
-                source={require('./../../assets/images/2STMIK-Jayanusa-Padang-removebg-preview.png')}></Image>
+                source={{uri:UserImage}}></Image>
             </View>
           </View>
           {/* // content *Rq */}

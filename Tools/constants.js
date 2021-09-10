@@ -20,9 +20,9 @@ import {
   faUserAstronaut,
 } from '@fortawesome/free-solid-svg-icons';
 
-export const Domain = '192.168.24.75/';
-export const base_url = 'http://'+Domain;
-export const API_Baseurl = base_url + 'api-server/public/';
+export const Domain = 'lorus.gunungmas-seluler.com/';
+export const base_url = 'https://'+Domain;
+export const API_Baseurl = base_url + 'Appuserlist/public/';
 export var menuList = {
   menu: [
     {lable: 'Matakuliah', icon: faBook, dest: 'MatakuliahPage'},

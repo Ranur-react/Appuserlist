@@ -39,7 +39,7 @@ export default class DosenPage extends Component {
       var Pitcher = await getData('matakuliah');
       if (Pitcher.length > 0) {
          this.setState({dataPthcer: Pitcher});
-      } else{s
+      } else{
         console.log('====================================');
         console.log(Pitcher);
         console.log('====================================');

@@ -64,7 +64,7 @@ export default class DosenPage extends Component {
             return (
               <Kotak
                 onClick={e =>
-                  this.props.navigation.navigate('DetailDosenPage', {value})
+                  this.props.navigation.replace('DetailDosenPage', {value})
                 }
                 data={value}
                 gambar={{uri: UserImage}}
