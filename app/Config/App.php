@@ -23,7 +23,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = 'http://192.168.24.75/api-server/public/';
+	public $baseURL = 'https://lorus.gunungmas-seluler.com/Appuserlist/public/';
 
 	/**
 	 * --------------------------------------------------------------------------
