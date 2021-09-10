@@ -35,6 +35,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->resource('mahasiswa');
 $routes->resource('jurusan');
+$routes->resource('dosen');
+$routes->resource('matakuliah');
 
 /*
  * --------------------------------------------------------------------
