@@ -46,14 +46,14 @@ export default class App extends Component {
         />
         <View style={styles.Header}>
           {/* // Back Button *Rq */}
-
+{/* 
           <TouchableOpacity
             onPress={() =>
               showToastWithGravityAndOffset('Ini Adalah Halaman Utama')
             }
             style={styles.HLeft}>
             <FontAwesomeIcon icon={faAngleLeft} />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
           {
             // header Title *Rq
           }
@@ -71,11 +71,11 @@ export default class App extends Component {
               Jayanusa College of Informatics Management
             </Text>
           </View>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             onPress={() => showToastWithGravityAndOffset('Ini Adalah Menu')}
             style={styles.HLeft}>
             <FontAwesomeIcon icon={faAlignJustify} />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
         {
           // header menu *JS

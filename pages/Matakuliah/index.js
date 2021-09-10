@@ -117,7 +117,7 @@ export default class DosenPage extends Component {
             </Text>
           </View>
           <TouchableOpacity
-            onPress={() => showToastWithGravityAndOffset('Ini Adalah Menu')}
+            onPress={() => this.props.navigation.navigate('HomePages')}
             style={styles.HLeft}>
             <FontAwesomeIcon icon={faAlignJustify} />
           </TouchableOpacity>
