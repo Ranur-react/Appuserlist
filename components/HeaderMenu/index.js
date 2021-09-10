@@ -45,7 +45,7 @@ export default class HeaderMenu extends Component {
         {menuList.menu.map((v, i) => {
           return (
             <TouchableOpacity
-              onPress={() => this.props.navprops.navigate(v.dest)}
+              onPress={() => this.props.navprops.replace(v.dest)}
               key={i}
               style={styles.BoxMenu}>
               <View>

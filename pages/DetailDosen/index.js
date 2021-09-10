@@ -51,14 +51,14 @@ export default class App extends Component {
     const earn = async v => {
       var P1 = await getData('jurusan');
       this.setState({jurusan: P1});
-      var Pitcher = await getData('mahasiswa/' + v);
+      var Pitcher = await getData('dosen/' + v);
       // this.setState({dataMahasiswa: Pitcher});
       console.log('================hasil tes tes====================');
       console.log(Pitcher);
       this.setState({
         data: Pitcher[0],
-        nama: Pitcher[0].nama,
-        telpon: Pitcher[0].telpon,
+        nama: Pitcher[0].nama_dosen,
+        pendidikan: Pitcher[0].pendidikan,
         alamat: Pitcher[0].alamat,
         email: Pitcher[0].email,
       });
@@ -73,7 +73,7 @@ export default class App extends Component {
     console.log(this.props.route.params);
     if (this.props.route.params.value) {
       // this.setState({data: this.props.route.params.value});
-      this.getDatafromBackend(this.props.route.params.value.nobp);
+      this.getDatafromBackend(this.props.route.params.value.id_dosen);
     }
   }
   render() {
@@ -84,15 +84,15 @@ export default class App extends Component {
 const simpanUpdateData = (v) => {
   const earn = async (e) => {
     var data = {
-      nama: this.state.nama,
-      telpon: this.state.telpon,
+      nama_dosen: this.state.nama,
+      pendidikan: this.state.pendidikan,
       alamat: this.state.alamat,
       email: this.state.email,
     };
 
-    var Pitcher = await updateData('mahasiswa/'+e, data);
+    var Pitcher = await updateData('dosen/'+e, data);
     if (Pitcher.status) {
-      this.getDatafromBackend(this.props.route.params.value.nobp);
+      this.getDatafromBackend(this.props.route.params.value.id_dosen);
       showToastWithGravityAndOffset(Pitcher.message.success);
     }else{
     console.log(Pitcher);
@@ -104,10 +104,10 @@ const simpanUpdateData = (v) => {
 const exexDeleteData = v => {
   const earn = async e => {
     
-    var Pitcher = await deleteData('mahasiswa/' + e, '');
+    var Pitcher = await deleteData('dosen/' + e, '');
 
     if (Pitcher.status) {
-      this.props.navigation.push('MahasiswaPage')
+      this.props.navigation.replace('DosenPage')
       showToastWithGravityAndOffset(Pitcher.message.success);
     } else {
       console.log(Pitcher);
@@ -130,8 +130,7 @@ const exexDeleteData = v => {
           />
           <TouchableOpacity
             onPress={() => {
-              exexDeleteData(this.state.data.nobp);
-
+              exexDeleteData(this.state.data.id_dosen);
             }}
             style={styles.BoxFlatButton}>
             <View>
@@ -183,7 +182,7 @@ const exexDeleteData = v => {
                           display: !this.state.DisiplayNama ? 'flex' : 'none',
                         },
                       ]}>
-                      {this.state.data.nama}
+                      {this.state.nama}
                     </Text>
 
                     <TextInput
@@ -208,7 +207,7 @@ const exexDeleteData = v => {
                     <TouchableOpacity
                       onPress={() => {
                         if (this.state.DisiplayNama) {
-                          simpanUpdateData(this.state.data.nobp);
+                          simpanUpdateData(this.state.data.id_dosen);
                         }
                         this.setState({
                           DisiplayNama: !this.state.DisiplayNama,
@@ -220,47 +219,44 @@ const exexDeleteData = v => {
                       />
                     </TouchableOpacity>
                   </View>
-
-
-                  
                   <View style={{alignItems: 'flex-start'}}>
                     <View style={styles.detailIcon}>
                       <FontAwesomeIcon
                         color="rgba(50,50,50,0.5)"
                         icon={faIdCardAlt}
                       />
-                      <Text> Student ID. {this.state.data.nobp}</Text>
+                      <Text>
+                        {' '}
+                        Lecture ID. {this.props.route.params.value.id_dosen}
+                      </Text>
                     </View>
-                    <View style={styles.detailIcon}>
+                    {/* <View style={styles.detailIcon}>
                       <FontAwesomeIcon
                         color="rgba(50,50,50,0.5)"
                         icon={faLaptopCode}
                       />
-                      <Text> {this.state.data.nama_jurusan}</Text>
-                    </View>
+                      <Text> {this.state.data.pendidikan}</Text>
+                    </View> */}
                     {/* 
                
                Phone Details
                
                 */}
                     <View style={styles.detailIcon}>
-                      <FontAwesomeIcon color="green" icon={faPhone} />
+                      <FontAwesomeIcon color="green" icon={faLaptopCode} />
                       <Text
                         style={{
                           display: !this.state.DisiplayPhone ? 'flex' : 'none',
-                        }}
-                        onPress={() =>
-                          Linking.openURL(`tel:${this.state.data.telpon}`)
-                        }>
+                        }}>
                         {' '}
-                        {this.state.data.telpon}{' '}
+                        {this.state.data.pendidikan}{' '}
                       </Text>
                       {/* 
                       Input Edit Telepone
                        */}
                       <TextInput
-                        value={this.state.telpon}
-                        onChangeText={e => this.setState({telpon: e})}
+                        value={this.state.pendidikan}
+                        onChangeText={e => this.setState({pendidikan: e})}
                         autoFocus={this.state.DisiplayPhone}
                         style={[
                           {
@@ -281,7 +277,7 @@ const exexDeleteData = v => {
                       <TouchableOpacity
                         onPress={() => {
                           if (this.state.DisiplayPhone) {
-                            simpanUpdateData(this.state.data.nobp);
+                            simpanUpdateData(this.state.data.id_dosen);
                           }
                           this.setState({
                             DisiplayPhone: !this.state.DisiplayPhone,
@@ -334,7 +330,7 @@ const exexDeleteData = v => {
                       <TouchableOpacity
                         onPress={() => {
                           if (this.state.DisiplayAlamat) {
-                            simpanUpdateData(this.state.data.nobp);
+                            simpanUpdateData(this.state.data.id_dosen);
                           }
                           this.setState({
                             DisiplayAlamat: !this.state.DisiplayAlamat,
@@ -387,7 +383,7 @@ const exexDeleteData = v => {
                       <TouchableOpacity
                         onPress={() => {
                           if (this.state.DisiplayEamil) {
-                            simpanUpdateData(this.state.data.nobp);
+                            simpanUpdateData(this.state.data.id_dosen);
                           }
                           this.setState({
                             DisiplayEamil: !this.state.DisiplayEamil,

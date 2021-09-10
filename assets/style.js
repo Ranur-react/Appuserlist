@@ -48,6 +48,7 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     color: '#08193A',
     textTransform: 'uppercase',
+    textAlign:'center',
   },
   HeaderTitleDetail: {
     textAlign: 'left',

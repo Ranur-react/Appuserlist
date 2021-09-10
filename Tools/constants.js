@@ -20,7 +20,7 @@ import {
   faUserAstronaut,
 } from '@fortawesome/free-solid-svg-icons';
 
-export const Domain = '192.168.208.75/';
+export const Domain = '192.168.24.75/';
 export const base_url = 'http://'+Domain;
 export const API_Baseurl = base_url + 'api-server/public/';
 export var menuList = {
@@ -28,8 +28,8 @@ export var menuList = {
     {lable: 'Matakuliah', icon: faBook, dest: 'MatakuliahPage'},
     {lable: 'Mahasiswa', icon: faUserGraduate, dest: 'MahasiswaPage'},
     {lable: 'Dosen', icon: faUserInjured, dest: 'DosenPage'},
-    {lable: 'KRS', icon: faBook, dest: 'DosenPage'},
-    {lable: 'Nilai', icon: faChartArea, dest: 'DosenPage'},
-    {lable: 'Profile', icon: faUserAstronaut, dest: 'DosenPage'},
+    // {lable: 'KRS', icon: faBook, dest: 'DosenPage'},
+    // {lable: 'Nilai', icon: faChartArea, dest: 'DosenPage'},
+    {lable: 'Profile', icon: faUserAstronaut, dest: 'AboutPage'},
   ],
 };
