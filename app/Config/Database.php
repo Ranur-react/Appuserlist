@@ -32,10 +32,15 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'maridb-master',
-		'username' => 'root',
-		'password' => 'barangmudo007',
-		'database' => 'db_restserver',
+		'hostname' => 'localhost',
+		'username' => 'gunn1374_root',
+		'password' => 'Padri0@@@',
+		'database' => 'gunn1374_reastserver',
+		// 'hostname' => 'maridb-master',
+		// 'username' => 'root',
+		// 'password' => 'barangmudo007',
+		// 'database' => 'db_restserver',
+
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
